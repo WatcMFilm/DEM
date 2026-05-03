@@ -147,7 +147,7 @@ body {
     font-size: 40px;
   }
   .footer-text{
-    display: none;
+    opacity: 0;
   }
 }
 
