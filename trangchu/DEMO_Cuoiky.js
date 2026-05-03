@@ -1,6 +1,6 @@
-const topMenu = document.querySelector(".dstieude");
-const menuBtn = document.querySelector(".mobile-menu-btn");
-const actionContainer = document.querySelector(".dshanhdong");
+var topMenu = document.querySelector(".dstieude");
+var menuBtn = document.querySelector(".mobile-menu-btn");
+var actionContainer = document.querySelector(".dshanhdong");
 
 if (menuBtn && topMenu) {
   menuBtn.addEventListener("click", function () {
