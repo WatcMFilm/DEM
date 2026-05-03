@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  background: linear-gradient(145deg, #05070a 0%, #0f141f 35%, #0d111e 100%);
+  color: #f4f4f7;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.container {
+  width: min(95%, 420px);
+  background: rgba(10, 12, 18, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 20px 35px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.055);
+  overflow: hidden;
+}
+
+.card {
+  padding: 30px 26px;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.brand h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  letter-spacing: 1px;
+  color: rgb(194, 149, 51);
+  text-shadow: 0 0 16px rgba(194, 149, 51, 0.45);
+}
+
+.brand .indam {
+  color: rgb(189, 61, 104);
+}
+
+.brand p {
+  color: #d3d3d9;
+  font-size: 0.94rem;
+  margin-top: 4px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 0.86rem;
+  color: #a8a6ad;
+  margin-bottom: 7px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(25, 30, 40, 0.8);
+  border-radius: 10px;
+  color: #fff;
+  padding: 11px 14px;
+  font-size: 0.96rem;
+  transition: all 0.18s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(194, 149, 51, 0.95);
+  box-shadow: 0 0 0 3px rgba(194, 149, 51, 0.2);
+}
+
+.action-btn {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 8px;
+  background: linear-gradient(125deg, #a63431 0%, #cd8c1a 100%);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  cursor: pointer;
+  box-shadow: 0 11px 22px rgba(183, 60, 67, 0.35);
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.help-text {
+  font-size: 0.86rem;
+  color: #b2afc0;
+  margin-top: 8px;
+}
+
+.link-row {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-row a {
+  color: rgb(194, 149, 51);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.link-row a:hover {
+  opacity: 0.78;
+}
+
+.ocean {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(13, 20, 24, 0.08)
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 13px 24px;
+  text-align: center;
+  font-size: 0.84rem;
+  color: #c5c1c9;
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập - WatcMFim</title>
+    <link rel="stylesheet" href="auth.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../IMG/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../IMG/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../IMG/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../IMG/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../IMG/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../IMG/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../IMG/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../IMG/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../IMG/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../IMG/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../IMG/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../IMG/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../IMG/favicon-16x16.png"
+    />
+
+    <link rel="manifest" href="../IMG/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="../ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <div class="brand">
+          <h1>Watc<span class="indam">MF</span>im</h1>
+          <p>Chào mừng quay lại, tiếp tục khám phá kho phim đỉnh cao.</p>
+        </div>
+
+        <nav class="link-row" style="margin-bottom: 20px">
+          <a href="../trangchu/DEMO_Cuoiky.html">Trang chủ</a>
+          <a href="../Theloai/theloai.html">Thể loại</a>
+          <a href="../Quocgia/quocgia.html">Quốc gia</a>
+        </nav>
+
+        <form>
+          <div class="form-group">
+            <label for="email">Email / Tên đăng nhập</label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="Nhập email hoặc username"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Nhập mật khẩu"
+              required
+            />
+          </div>
+
+          <button class="action-btn" type="submit">Đăng nhập</button>
+
+          <p class="help-text">
+            Nếu bạn quên mật khẩu, nhấn vào liên kết bên dưới để khôi phục.
+          </p>
+
+          <div class="link-row">
+            <a href="forgot-password.html">Quên mật khẩu?</a>
+            <a href="register.html">Tạo tài khoản mới</a>
+          </div>
+        </form>
+      </section>
+
+      <div class="ocean">
+        Lan tỏa trải nghiệm tối thượng, truy cập nhanh chóng và an toàn.
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          localStorage.setItem("isLoggedIn", "true");
+          window.location.href = "../trangchu/DEMO_Cuoiky.html";
+        });
+      });
+    </script>
+  </body>
+</html>

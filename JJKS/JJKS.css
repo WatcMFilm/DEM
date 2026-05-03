@@ -1,0 +1,426 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0b0b0b;
+  margin: auto;
+  max-width: 1600px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(16, 16, 16, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 5%;
+  flex-wrap: wrap;
+}
+
+.logo a {
+  color: rgb(194, 149, 51);
+  font-size: 42px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.indam {
+  color: rgb(189, 61, 104);
+}
+
+.dstieude {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tieude {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.tieude:hover {
+  color: #f5d067;
+}
+
+.dshanhdong {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-menu-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  font-size: 22px;
+  line-height: 1;
+  border-radius: 6px;
+  padding: 5px 8px;
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu-btn:focus {
+  outline: 2px solid orange;
+}
+
+.search {
+  border-radius: 999px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  width: 210px;
+}
+
+.search::placeholder {
+  color: #aaa;
+}
+
+.nutdangnhap {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+@media only screen and (max-width: 1023px) and (min-width: 740px) {
+  .topbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 50px;
+  }
+
+  .motanho {
+    display: flex;
+    gap: 0;
+    align-items: center;
+  }
+
+  .anh1 {
+    width: 150px;
+  }
+
+  .motanho1 {
+    gap: 25px;
+  }
+
+  .motanho1 .tenphim {
+    font-size: 40px;
+  }
+  .mota_comment {
+    color: white;
+    margin-top: 60px;
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+  }
+  .thongtin {
+    justify-content: center;
+  }
+  .daodien {
+    font-size: 25px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+}
+
+.tieude1 {
+  display: flex;
+  gap: 10px;
+  margin-top: 35px;
+  align-items: center;
+  padding: 0 1.5%;
+  color: whitesmoke;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.tieude1 a {
+  text-decoration: none;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.tieude1 a:hover {
+  background: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+.video video {
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 35px;
+  display: block;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+.mota_comment {
+  color: white;
+  margin-top: 50px;
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+}
+
+.anh1 {
+  width: 180px;
+  box-shadow: 0 0 25px rgb(85, 82, 82);
+}
+
+.anh1 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.motanho {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.motanho1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+
+.tenphim {
+  font-size: 28px;
+}
+
+.tac {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.thongtin {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.tieuchidg {
+  font-size: 12px;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 6px 10px;
+}
+.thongtinphim {
+  font-size: 16px;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.episode-header {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid #1e2333;
+  padding: 50px 50px;
+  border-radius: 15px;
+}
+
+.episode-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+  color: white;
+}
+
+.episodes {
+  display: flex;
+  gap: 10px;
+}
+
+.ep {
+  background: #1e2333;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  background: #f5d067;
+  color: black;
+}
+
+.comment-box {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+
+  background: #1a1a1a;
+  color: white;
+
+  border: 1px solid #2a2a2a;
+}
+
+.fake-comments p {
+  margin: 6px 0;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.comment-box textarea {
+  width: 100%;
+  height: 120px;
+  margin-top: 20px;
+  padding: 15px;
+
+  border-radius: 10px;
+  border: none;
+
+  background: #262626;
+  color: white;
+}
+
+.comment-input {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.comment-input input {
+  flex: 1;
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #262626;
+  color: white;
+}
+
+.btn-comment {
+  margin-top: 18px;
+  padding: 10px 22px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #f5d067;
+  color: black;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.line {
+  border: none;
+  height: 1px;
+  background: #444;
+  margin: 20px 0;
+}
+
+.footer {
+  padding: 40px 5%;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.icon1 {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-social .icon1:hover {
+  background: orange;
+  color: black;
+}
+
+.duongdan {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.dd {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.mieutacuoi {
+  margin-top: 20px;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.last {
+  margin-top: 10px;
+  color: #555;
+  font-size: 12px;
+}

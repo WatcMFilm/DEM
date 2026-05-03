@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký - WatcMFim</title>
+    <link rel="stylesheet" href="auth.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../IMG/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../IMG/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../IMG/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../IMG/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../IMG/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../IMG/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../IMG/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../IMG/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../IMG/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../IMG/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../IMG/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../IMG/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../IMG/favicon-16x16.png"
+    />
+
+    <link rel="manifest" href="../IMG/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="../ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <div class="brand">
+          <h1>Watc<span class="indam">MF</span>im</h1>
+          <p>Tham gia cộng đồng xem phim chất lượng cao ngay hôm nay.</p>
+        </div>
+
+        <nav class="link-row" style="margin-bottom: 20px">
+          <a href="../trangchu/DEMO_Cuoiky.html">Trang chủ</a>
+          <a href="../Theloai/theloai.html">Thể loại</a>
+          <a href="../Quocgia/quocgia.html">Quốc gia</a>
+        </nav>
+
+        <form>
+          <div class="form-group">
+            <label for="name">Họ và tên</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Nhập họ tên"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Nhập email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Tạo mật khẩu"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Xác nhận mật khẩu</label>
+            <input
+              id="confirm-password"
+              name="confirm-password"
+              type="password"
+              placeholder="Nhập lại mật khẩu"
+              required
+            />
+          </div>
+
+          <button class="action-btn" type="submit">Đăng ký</button>
+          <p class="help-text">
+            Bấm đăng ký tức là bạn đã đồng ý với điều khoản và chính sách bảo
+            mật.
+          </p>
+
+          <div class="link-row">
+            <a href="login.html">Đã có tài khoản? Đăng nhập</a>
+          </div>
+        </form>
+      </section>
+
+      <div class="ocean">
+        Phong cách dark luxury, thiết kế tối đa hoá trải nghiệm người dùng.
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          localStorage.setItem("isLoggedIn", "true");
+          window.location.href = "../trangchu/DEMO_Cuoiky.html";
+        });
+      });
+    </script>
+  </body>
+</html>

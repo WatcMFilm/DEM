@@ -1,0 +1,644 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #0d0d0d, #060606, #000000);
+  margin: auto;
+  max-width: 1600px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(5px);
+  background: rgba(30, 30, 30, 0.85);
+  z-index: 999;
+}
+
+.user-status {
+  color: #fff;
+  font-size: 14px;
+  padding: 7px 5%;
+  background: rgba(45, 45, 45, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.modal-content {
+  background-color: #141414;
+  margin: 10% auto;
+  padding: 25px;
+  border: 1px solid #333;
+  width: min(95%, 420px);
+  border-radius: 14px;
+  color: #f2f2f2;
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.45);
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+}
+
+.oauth-button {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  background: #222;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+
+.oauth-button:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.hint {
+  margin-top: 8px;
+  color: #999;
+  font-size: 12px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  font-family: "Playfair Display", serif;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo a {
+  color: rgb(194, 149, 51);
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.mobile-menu-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 22px;
+  line-height: 1;
+  border-radius: 6px;
+  padding: 5px 8px;
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu-btn:focus {
+  outline: 2px solid orange;
+}
+
+.indam {
+  color: rgb(189, 61, 104);
+}
+
+.dstieude {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tieude {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.tieude:hover {
+  color: orange;
+}
+
+.dshanhdong {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.search {
+  border-radius: 10px;
+  padding: 8px 15px;
+  border: 1px solid black;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  width: 200px;
+}
+.search input {
+  background: #1f1f1f;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: white;
+}
+
+.nutdangnhap {
+  color: white;
+  text-decoration: none;
+  background: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.banner {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.banner-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-banner .banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.75));
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.dulieu {
+  max-width: 600px;
+}
+
+.banner-switch {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.switch-btn {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.switch-btn:hover,
+.switch-btn.active {
+  border-color: #ffb62b;
+  background: rgba(255, 182, 43, 0.22);
+  color: #ffeb91;
+}
+
+.tenphim {
+  color: orange;
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(255, 180, 0, 0.4);
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+
+.mucluc1,
+.phim {
+  color: white;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.phim {
+  font-size: 15px;
+}
+
+.banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nutxem,
+.phim-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px;
+  background: #b62b2b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 500px;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(182, 43, 43, 0.45);
+  transition: all 0.3s ease;
+}
+
+.nutxem:hover,
+.phim-btn:hover {
+  background: #d03030;
+  box-shadow: 0 0 18px rgba(208, 48, 48, 0.75);
+  transform: translateY(-2px);
+}
+
+.trangtri1 {
+  border: 1px solid grey;
+  display: flex;
+  justify-content: space-around;
+  width: 80px;
+  border-radius: 15px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.trangtri1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.trangtri1 a:active {
+  color: rgb(231, 51, 81);
+}
+
+.phimnoibat {
+  padding: 40px 5%;
+  background: #0b0b0b;
+}
+
+.tieude2 {
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.movie-item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.movie-item img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(32, 32, 32, 0.86);
+  color: #fff;
+  text-align: center;
+  line-height: 42px;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, background 0.25s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  background: rgba(250, 174, 23, 0.95);
+  color: #111;
+}
+
+}
+
+.movie-item img {
+  transition: 0.3s;
+}
+
+.movies {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 12px 28px rgba(167, 158, 157, 0.5);
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.movie-info h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.movie-info p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.comment {
+  padding: 40px 5%;
+}
+
+#backToTopBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  border: none;
+  background: rgba(30, 30, 30, 0.85);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 999px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+}
+
+#backToTopBtn:hover {
+  background: rgba(255, 186, 39, 0.9);
+  color: #111;
+}
+
+.movie-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.khungcomment {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  border: 1px solid grey;
+  border-radius: 15px;
+  background-color: rgb(22, 21, 21);
+  padding: 20px;
+}
+
+.comment-title {
+  color: whitesmoke;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+.listcard {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.bl {
+  height: 120px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.vitrinutsang1,
+.vitrinutsang2 {
+  cursor: pointer;
+}
+
+.nutxemthem {
+  text-decoration: none;
+  color: grey;
+}
+
+.nutsang1,
+.nutsang2 {
+  color: white;
+  border: 1px solid grey;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  border: none;
+  height: 1px;
+  background: #444;
+  margin: 20px 0;
+}
+
+.tong {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.con {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.td1 {
+  color: orange;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.noidung,
+.theloai {
+  color: white;
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.anh {
+  width: 30px;
+}
+.badge {
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 11px;
+  color: white;
+}
+.trinhtham {
+  background: grey;
+}
+.bikich {
+  background: rgb(142, 108, 221);
+}
+.haihuoc {
+  background: rgb(177, 157, 69);
+}
+.maquai {
+  background: rgb(61, 29, 150);
+}
+.tinhcam {
+  background: rgb(197, 66, 121);
+}
+
+.bl-moi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.binhluanmoi {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.footer {
+  padding: 40px 5%;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.icon1 {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-social .icon1:hover {
+  background: orange;
+  color: black;
+}
+
+.duongdan {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.dd {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.mieutacuoi {
+  margin-top: 20px;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.last {
+  margin-top: 10px;
+  color: #555;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 739px) {
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+  .dstieude {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .dstieude.open {
+    display: flex;
+  }
+  .dstieude .tieude {
+    display: block;
+    font-size: 18px;
+  }
+  .topbar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 740px) {
+  .topbar {
+    display: flex;
+    flex-direction: column;
+  }
+  .dstieude .tieude {
+    align-content: center;
+  }
+  .logo {
+    font-size: 70px;
+  }
+}
